@@ -1,0 +1,398 @@
+{
+  "total": 65,
+  "passed": 62,
+  "failed": 0,
+  "warnings": 3,
+  "results": [
+    {
+      "test": "A1: API Server Health Check",
+      "status": "PASS",
+      "details": "Status: 200, Response: {'status': 'healthy'}",
+      "timestamp": 1770129966.639756
+    },
+    {
+      "test": "B1: Request without API key",
+      "status": "PASS",
+      "details": "Correctly rejected with status 422",
+      "timestamp": 1770129966.6409569
+    },
+    {
+      "test": "B2: Request with invalid API key",
+      "status": "PASS",
+      "details": "Correctly rejected with 401",
+      "timestamp": 1770129966.642582
+    },
+    {
+      "test": "B3: Request with valid API key",
+      "status": "PASS",
+      "details": "Authentication successful",
+      "timestamp": 1770129966.6437361
+    },
+    {
+      "test": "C1: Missing sessionId validation",
+      "status": "PASS",
+      "details": "Correctly rejected with 422",
+      "timestamp": 1770129966.6446662
+    },
+    {
+      "test": "C2: Missing message validation",
+      "status": "PASS",
+      "details": "Correctly rejected with 422",
+      "timestamp": 1770129966.645613
+    },
+    {
+      "test": "C3: Invalid message format validation",
+      "status": "PASS",
+      "details": "Correctly rejected with 422",
+      "timestamp": 1770129966.646492
+    },
+    {
+      "test": "C4: Valid request format",
+      "status": "PASS",
+      "details": "Response: {'status': 'success', 'reply': \"Thank you. I'll check.\"}",
+      "timestamp": 1770129966.647516
+    },
+    {
+      "test": "D: Scam Detection - High confidence scam",
+      "status": "PASS",
+      "details": "Correctly detected: True",
+      "timestamp": 1770129966.9190369
+    },
+    {
+      "test": "D: Scam Detection - Urgent scam",
+      "status": "PASS",
+      "details": "Correctly detected: True",
+      "timestamp": 1770129967.281526
+    },
+    {
+      "test": "D: Scam Detection - OTP scam",
+      "status": "PASS",
+      "details": "Correctly detected: True",
+      "timestamp": 1770129967.5556622
+    },
+    {
+      "test": "D: Scam Detection - Prize scam",
+      "status": "PASS",
+      "details": "Correctly detected: True",
+      "timestamp": 1770129967.834209
+    },
+    {
+      "test": "D: Scam Detection - Payment scam",
+      "status": "PASS",
+      "details": "Correctly detected: True",
+      "timestamp": 1770129968.111108
+    },
+    {
+      "test": "D: Scam Detection - Normal message",
+      "status": "PASS",
+      "details": "Correctly detected: False",
+      "timestamp": 1770129968.1151628
+    },
+    {
+      "test": "D: Scam Detection - Normal message",
+      "status": "PASS",
+      "details": "Correctly detected: False",
+      "timestamp": 1770129968.117889
+    },
+    {
+      "test": "D: Scam Detection - Normal message",
+      "status": "PASS",
+      "details": "Correctly detected: False",
+      "timestamp": 1770129968.120327
+    },
+    {
+      "test": "D: Overall Scam Detection Accuracy",
+      "status": "PASS",
+      "details": "8/8 correct (100.0%)",
+      "timestamp": 1770129968.1203399
+    },
+    {
+      "test": "E: Bank account extraction",
+      "status": "PASS",
+      "details": "Intelligence extraction attempted",
+      "timestamp": 1770129969.654387
+    },
+    {
+      "test": "E: UPI ID extraction",
+      "status": "PASS",
+      "details": "Intelligence extraction attempted",
+      "timestamp": 1770129972.059763
+    },
+    {
+      "test": "E: Phishing link extraction",
+      "status": "PASS",
+      "details": "Intelligence extraction attempted",
+      "timestamp": 1770129973.5912168
+    },
+    {
+      "test": "E: Phone number extraction",
+      "status": "PASS",
+      "details": "Intelligence extraction attempted",
+      "timestamp": 1770129975.118386
+    },
+    {
+      "test": "E: Suspicious keywords extraction",
+      "status": "PASS",
+      "details": "Intelligence extraction attempted",
+      "timestamp": 1770129977.879918
+    },
+    {
+      "test": "E: Multiple intelligence types",
+      "status": "PASS",
+      "details": "Intelligence extraction attempted",
+      "timestamp": 1770129980.113159
+    },
+    {
+      "test": "E: Overall Intelligence Extraction",
+      "status": "PASS",
+      "details": "6/6 tests passed",
+      "timestamp": 1770129980.113169
+    },
+    {
+      "test": "F1: Turn 1 - Your account is blocked...",
+      "status": "PASS",
+      "details": "Reply: I'm surprised to hear that my account is blocked -...",
+      "timestamp": 1770129980.422604
+    },
+    {
+      "test": "F2: Turn 2 - Verify immediately by clicking...",
+      "status": "PASS",
+      "details": "Reply: I want to resolve this quickly. What do I need to ...",
+      "timestamp": 1770129981.108001
+    },
+    {
+      "test": "F3: Turn 3 - Share your UPI ID to avoid sus...",
+      "status": "PASS",
+      "details": "Reply: Can you help me understand what happened?...",
+      "timestamp": 1770129981.814301
+    },
+    {
+      "test": "F4: Turn 4 - Send money to account 1234-567...",
+      "status": "PASS",
+      "details": "Reply: How do I verify my account?...",
+      "timestamp": 1770129982.689887
+    },
+    {
+      "test": "F: Multi-Turn Conversation",
+      "status": "PASS",
+      "details": "Successfully handled 4 turns",
+      "timestamp": 1770129983.19431
+    },
+    {
+      "test": "G1: Required fields present",
+      "status": "PASS",
+      "details": "Fields: ['status', 'reply']",
+      "timestamp": 1770129983.4522932
+    },
+    {
+      "test": "G2: Status field format",
+      "status": "PASS",
+      "details": "Status: success",
+      "timestamp": 1770129983.452304
+    },
+    {
+      "test": "G3: Reply field format",
+      "status": "PASS",
+      "details": "Reply type: <class 'str'>",
+      "timestamp": 1770129983.452312
+    },
+    {
+      "test": "G4: Valid JSON structure",
+      "status": "PASS",
+      "details": "Response is valid JSON",
+      "timestamp": 1770129983.4523442
+    },
+    {
+      "test": "G: Overall Response Format",
+      "status": "PASS",
+      "details": "All format checks passed",
+      "timestamp": 1770129983.45235
+    },
+    {
+      "test": "H1: Invalid JSON handling",
+      "status": "PASS",
+      "details": "Correctly handled with status 422",
+      "timestamp": 1770129983.456531
+    },
+    {
+      "test": "H2: Empty request body handling",
+      "status": "PASS",
+      "details": "Correctly rejected with 422",
+      "timestamp": 1770129983.460077
+    },
+    {
+      "test": "H3: Very long message handling",
+      "status": "PASS",
+      "details": "Handled successfully",
+      "timestamp": 1770129983.468214
+    },
+    {
+      "test": "H4: Special characters handling",
+      "status": "PASS",
+      "details": "Handled successfully",
+      "timestamp": 1770129983.6139781
+    },
+    {
+      "test": "I: Initial scam message",
+      "status": "WARN",
+      "details": "Some quality checks failed. Reply: can you help me understand what happened?...",
+      "timestamp": 1770129983.8139808
+    },
+    {
+      "test": "I: Follow-up with request",
+      "status": "WARN",
+      "details": "Some quality checks failed. Reply: can you help me understand what happened?...",
+      "timestamp": 1770129983.9422731
+    },
+    {
+      "test": "I: Overall Agent Response Quality",
+      "status": "WARN",
+      "details": "0/2 passed",
+      "timestamp": 1770129983.942291
+    },
+    {
+      "test": "J1: Session creation",
+      "status": "PASS",
+      "details": "Session created successfully",
+      "timestamp": 1770129983.947964
+    },
+    {
+      "test": "J2: Session continuation",
+      "status": "PASS",
+      "details": "Session maintained correctly",
+      "timestamp": 1770129984.455358
+    },
+    {
+      "test": "J3: New session creation",
+      "status": "PASS",
+      "details": "New session created independently",
+      "timestamp": 1770129984.963576
+    },
+    {
+      "test": "J: Overall Session Management",
+      "status": "PASS",
+      "details": "All session tests passed",
+      "timestamp": 1770129984.9635851
+    },
+    {
+      "test": "K1: Message 1 sent",
+      "status": "PASS",
+      "details": "Reply received: How do I verify my account?...",
+      "timestamp": 1770129985.114903
+    },
+    {
+      "test": "K2: Message 2 sent",
+      "status": "PASS",
+      "details": "Reply received: Why is my account being suspended?...",
+      "timestamp": 1770129985.962467
+    },
+    {
+      "test": "K3: Message 3 sent",
+      "status": "PASS",
+      "details": "Reply received: How do I verify my account?...",
+      "timestamp": 1770129986.617028
+    },
+    {
+      "test": "K4: Message 4 sent",
+      "status": "PASS",
+      "details": "Reply received: I have a question - what do I need to do...",
+      "timestamp": 1770129987.4746299
+    },
+    {
+      "test": "K5: Message 5 sent",
+      "status": "PASS",
+      "details": "Reply received: Why is my account being suspended?...",
+      "timestamp": 1770129988.479601
+    },
+    {
+      "test": "K: Callback Functionality",
+      "status": "PASS",
+      "details": "Callback should have been triggered after 4+ messages",
+      "timestamp": 1770129988.9846551
+    },
+    {
+      "test": "L1: Response time test 1",
+      "status": "PASS",
+      "details": "157.03ms",
+      "timestamp": 1770129989.1420312
+    },
+    {
+      "test": "L2: Response time test 2",
+      "status": "PASS",
+      "details": "182.65ms",
+      "timestamp": 1770129989.8297331
+    },
+    {
+      "test": "L3: Response time test 3",
+      "status": "PASS",
+      "details": "231.88ms",
+      "timestamp": 1770129990.5648
+    },
+    {
+      "test": "L4: Response time test 4",
+      "status": "PASS",
+      "details": "156.69ms",
+      "timestamp": 1770129991.22656
+    },
+    {
+      "test": "L5: Response time test 5",
+      "status": "PASS",
+      "details": "143.18ms",
+      "timestamp": 1770129991.874769
+    },
+    {
+      "test": "L: Average Response Time",
+      "status": "PASS",
+      "details": "174.29ms",
+      "timestamp": 1770129992.379874
+    },
+    {
+      "test": "L: Max Response Time",
+      "status": "PASS",
+      "details": "231.88ms",
+      "timestamp": 1770129992.3798988
+    },
+    {
+      "test": "L: Min Response Time",
+      "status": "PASS",
+      "details": "143.18ms",
+      "timestamp": 1770129992.37991
+    },
+    {
+      "test": "M: Empty message",
+      "status": "PASS",
+      "details": "Handled successfully",
+      "timestamp": 1770129992.386195
+    },
+    {
+      "test": "M: Very short message",
+      "status": "PASS",
+      "details": "Handled successfully",
+      "timestamp": 1770129992.392072
+    },
+    {
+      "test": "M: Message with only numbers",
+      "status": "PASS",
+      "details": "Handled successfully",
+      "timestamp": 1770129992.3963661
+    },
+    {
+      "test": "M: Message with only special characters",
+      "status": "PASS",
+      "details": "Handled successfully",
+      "timestamp": 1770129992.3994958
+    },
+    {
+      "test": "M: Unicode characters",
+      "status": "PASS",
+      "details": "Handled successfully",
+      "timestamp": 1770129992.6423411
+    },
+    {
+      "test": "M: Overall Edge Cases",
+      "status": "PASS",
+      "details": "5/5 handled",
+      "timestamp": 1770129992.642362
+    }
+  ]
+}
