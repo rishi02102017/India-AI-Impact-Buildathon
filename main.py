@@ -882,7 +882,7 @@ async def root():
     return {"message": "Agentic Honey-Pot API", "status": "running"}
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 async def health():
     return {"status": "healthy"}
 
